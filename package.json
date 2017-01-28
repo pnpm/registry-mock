@@ -15,7 +15,7 @@
     "publish-test-packages": "sh packages/publish-all.sh",
     "?build-verdaccio": "echo 'Cache the verdaccio store for faster tests execution'",
     "build-verdaccio": "npm-run-all -p -r verdaccio publish-test-packages",
-    "prepublish": "build-verdaccio"
+    "prepublish": "npm run build-verdaccio"
   },
   "repository": {
     "type": "git",
