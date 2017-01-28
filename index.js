@@ -4,6 +4,6 @@ const childProcess = require('child_process')
 
 module.exports = () => {
   const configPath = path.join(__dirname, 'registry/config.yaml')
-  const verdaccioBin = 'node_modules/verdaccio/bin/verdaccio'
+  const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
   return childProcess.spawnSync('node', [verdaccioBin, '-c', configPath], {stdio: 'inherit'})
 }
