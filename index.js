@@ -1,6 +1,9 @@
 'use strict'
+const path = require('path')
 const childProcess = require('child_process')
 
 module.exports = () => {
-  return childProcess.spawnSync('node', ['node_modules/verdaccio/bin/verdaccio', '-c', './registry/config.yaml'], {stdio: 'inherit'})
+  const configPath = path.join(__dirname, 'registry/config.yaml')
+  const verdaccioBin = 'node_modules/verdaccio/bin/verdaccio'
+  return childProcess.spawnSync('node', [verdaccioBin, '-c', configPath], {stdio: 'inherit'})
 }
