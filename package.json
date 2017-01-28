@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "verdaccio": "verdaccio -c registry/prepublish-config.yaml",
-    "prebuild-verdaccio": "rimraf registry/storage-cache/",
+    "prebuild-verdaccio": "rimraf registry/storage-cache/ && rimraf registry/storage/",
     "publish-test-packages": "sh packages/publish-all.sh",
     "build-verdaccio": "npm-run-all -p -r verdaccio publish-test-packages",
     "prepublish": "npm run build-verdaccio"
