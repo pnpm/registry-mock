@@ -1,2 +1,3 @@
 # pnpm-registry-mock
-Mock the npm registry
+
+> Mock the npm registry

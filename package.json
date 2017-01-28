@@ -1,0 +1,43 @@
+{
+  "name": "pnpm-registry-mock",
+  "version": "0.0.0",
+  "description": "Mock the npm registry",
+  "main": "index.js",
+  "bin": "bin/pnpm-registry-mock.js",
+  "files": [
+    "bin",
+    "index.js",
+    "registry"
+  ],
+  "scripts": {
+    "verdaccio": "verdaccio -c ./registry/config.yaml",
+    "prebuild-verdaccio": "rimraf registry/storage/",
+    "publish-test-packages": "sh packages/publish-all.sh",
+    "?build-verdaccio": "echo 'Cache the verdaccio store for faster tests execution'",
+    "build-verdaccio": "npm-run-all -p -r verdaccio publish-test-packages",
+    "prepublish": "build-verdaccio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnpm/pnpm-registry-mock.git"
+  },
+  "keywords": [
+    "pnpm",
+    "verdaccio",
+    "mock",
+    "registry"
+  ],
+  "author": "Zoltan Kochan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/pnpm-registry-mock/issues"
+  },
+  "homepage": "https://github.com/pnpm/pnpm-registry-mock#readme",
+  "dependencies": {
+    "verdaccio": "^2.1.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.1",
+    "rimraf": "^2.5.4"
+  }
+}
