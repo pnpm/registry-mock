@@ -10,10 +10,9 @@
     "registry"
   ],
   "scripts": {
-    "verdaccio": "verdaccio -c ./registry/config.yaml",
-    "prebuild-verdaccio": "rimraf registry/storage/",
+    "verdaccio": "verdaccio -c registry/prepublish-config.yaml",
+    "prebuild-verdaccio": "rimraf registry/storage-cache/",
     "publish-test-packages": "sh packages/publish-all.sh",
-    "?build-verdaccio": "echo 'Cache the verdaccio store for faster tests execution'",
     "build-verdaccio": "npm-run-all -p -r verdaccio publish-test-packages",
     "prepublish": "npm run build-verdaccio"
   },
@@ -34,10 +33,11 @@
   },
   "homepage": "https://github.com/pnpm/pnpm-registry-mock#readme",
   "dependencies": {
+    "cpr": "^2.0.2",
+    "rimraf": "^2.5.4",
     "verdaccio": "^2.1.0"
   },
   "devDependencies": {
-    "npm-run-all": "^4.0.1",
-    "rimraf": "^2.5.4"
+    "npm-run-all": "^4.0.1"
   }
 }
