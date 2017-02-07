@@ -1,6 +1,9 @@
 {
   "name": "pkg-with-bundled-dependencies",
   "version": "1.0.0",
+  "scripts": {
+    "prepublish": "npm install --ignore-scripts"
+  },
   "bundledDependencies": [
     "hello-world-js-bin"
   ],
