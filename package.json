@@ -10,11 +10,11 @@
     "registry"
   ],
   "scripts": {
-    "verdaccio": "verdaccio -c registry/prepublish-config.yaml",
-    "prebuild-verdaccio": "rimraf registry/storage-cache/ && rimraf registry/storage/",
-    "publish-test-packages": "sh packages/publish-all.sh",
-    "build-verdaccio": "npm-run-all -p -r verdaccio publish-test-packages",
-    "prepublish": "npm run build-verdaccio"
+    "registry": "verdaccio -c registry/prepublish-config.yaml",
+    "prebuild": "rimraf registry/storage-cache/ && rimraf registry/storage/",
+    "publish-packages": "sh packages/publish-all.sh",
+    "build": "npm-run-all -p -r registry publish-packages",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
