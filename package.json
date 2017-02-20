@@ -1,6 +1,6 @@
 {
   "name": "pnpm-registry-mock",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Mock the npm registry",
   "main": "index.js",
   "bin": "bin/pnpm-registry-mock.js",
