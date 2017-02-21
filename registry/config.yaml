@@ -42,6 +42,14 @@ packages:
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
 
+  'pkg-with-1-dep':
+    access: $all
+    publish: $all
+
+  'dep-of-pkg-with-1-dep':
+    access: $all
+    publish: $all
+
 # log settings
 logs:
   - {type: stdout, format: pretty, level: error}
