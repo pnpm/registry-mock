@@ -1,0 +1,9 @@
+{
+  "name": "abc-parent-with-ab",
+  "version": "1.0.0",
+  "dependencies": {
+    "abc": "^1.0.0",
+    "peer-a": "^1.0.0",
+    "peer-b": "^1.0.0"
+  }
+}

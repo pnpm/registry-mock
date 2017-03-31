@@ -1,0 +1,12 @@
+{
+  "name": "abc",
+  "version": "1.0.0",
+  "dependencies": {
+    "dep-of-pkg-with-1-dep": "100.0.0"
+  },
+  "peerDependencies": {
+    "peer-a": "^1.0.0",
+    "peer-b": "^1.0.0",
+    "peer-c": "^1.0.0"
+  }
+}
