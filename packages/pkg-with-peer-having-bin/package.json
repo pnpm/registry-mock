@@ -1,0 +1,10 @@
+{
+  "name": "pkg-with-peer-having-bin",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "peer-with-bin": "^1.0.0"
+  },
+  "dependencies": {
+    "hello-world-js-bin": "^1.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "parent-of-pkg-with-events-and-peers",
+  "version": "1.0.0",
+  "dependencies": {
+    "pkg-with-events-and-peers": "^1.0.0",
+    "peer-c": "^1.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "pkg-with-resolved-peer",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "peer-c": "*"
+  },
+  "dependencies": {
+    "peer-c": "^1.0.0"
+  }
+}
