@@ -30,6 +30,10 @@ packages:
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
 
+  'needs-auth':
+    access: $authenticated
+    publish: $authenticated
+
   '*':
     # allow all users (including non-authenticated users) to read and
     # publish all packages
@@ -41,14 +45,6 @@ packages:
 
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
-
-  'pkg-with-1-dep':
-    access: $all
-    publish: $all
-
-  'dep-of-pkg-with-1-dep':
-    access: $all
-    publish: $all
 
 # log settings
 logs:
