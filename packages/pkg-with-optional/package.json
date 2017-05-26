@@ -1,0 +1,7 @@
+{
+  "name": "pkg-with-optional",
+  "version": "1.0.0",
+  "optionalDependencies": {
+    "not-compatible-with-any-os": "^1.0.0"
+  }
+}
