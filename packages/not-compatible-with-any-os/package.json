@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "os": [
     "this-os-does-not-exist"
-  ]
+  ],
+  "dependencies": {
+    "dep-of-optional-pkg": "1.0.0"
+  }
 }
