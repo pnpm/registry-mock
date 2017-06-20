@@ -23,6 +23,10 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
+  '@private/*':
+    access: $authenticated
+    publish: $authenticated
+
   '@*/*':
     # scoped packages
     access: $all
