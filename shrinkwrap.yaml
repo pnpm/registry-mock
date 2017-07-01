@@ -1278,9 +1278,9 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
+shrinkwrapVersion: 3
 specifiers:
   cpr: ^2.0.2
   npm-run-all: ^4.0.1
   rimraf: ^2.5.4
   verdaccio: ^2.1.0
-version: 3
