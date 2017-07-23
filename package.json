@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/pnpm/pnpm-registry-mock#readme",
   "dependencies": {
-    "cpr": "^2.0.2",
+    "cpr": "^2.2.0",
     "rimraf": "^2.5.4",
-    "verdaccio": "^2.1.0"
+    "verdaccio": "^2.3.0"
   },
   "devDependencies": {
     "npm-run-all": "^4.0.1"
