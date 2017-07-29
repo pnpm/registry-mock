@@ -5,7 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "hello-world-js-bin && node create generated-by-preinstall",
-    "install": "hello-world-js-bin && node create generated-by-install",
     "postinstall": "hello-world-js-bin && node create generated-by-postinstall"
   },
   "author": "Zoltan Kochan <zoltan.kochan@gmail.com> (http://kochan.io/)",
