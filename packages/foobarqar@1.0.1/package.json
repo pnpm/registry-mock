@@ -1,0 +1,9 @@
+{
+  "name": "foobarqar",
+  "version": "1.0.1",
+  "dependencies": {
+    "foo": "^100.0.0",
+    "bar": "100.0.0",
+    "qar": "100.0.0"
+  }
+}
