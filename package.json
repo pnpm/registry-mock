@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/pnpm/pnpm-registry-mock#readme",
   "dependencies": {
-    "cpr": "^2.2.0",
+    "cpr": "^3.0.1",
     "rimraf": "^2.5.4",
     "verdaccio": "^2.3.0"
   },
