@@ -7,7 +7,8 @@
   "files": [
     "bin",
     "index.js",
-    "registry"
+    "registry",
+    "lib"
   ],
   "scripts": {
     "registry": "verdaccio -c registry/prepublish-config.yaml",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/pnpm/pnpm-registry-mock#readme",
   "dependencies": {
+    "anonymous-npm-registry-client": "^0.1.2",
     "cpr": "^3.0.1",
     "rimraf": "^2.5.4",
     "verdaccio": "^2.3.0"

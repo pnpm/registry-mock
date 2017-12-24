@@ -7,3 +7,5 @@ module.exports = () => {
   const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
   return childProcess.spawnSync('node', [verdaccioBin, '-c', configPath], {stdio: 'inherit'})
 }
+
+module.exports.addDistTag = require('./lib/addDistTag')
