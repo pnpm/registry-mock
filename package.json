@@ -37,7 +37,7 @@
     "anonymous-npm-registry-client": "^0.1.2",
     "cpr": "^3.0.1",
     "rimraf": "^2.5.4",
-    "verdaccio": "^2.3.0"
+    "verdaccio": "^2.7.4"
   },
   "devDependencies": {
     "npm-run-all": "^4.0.1"
