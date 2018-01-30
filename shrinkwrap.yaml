@@ -181,6 +181,7 @@ packages:
     resolution:
       integrity: sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
   /balanced-match/1.0.0:
+    dev: false
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
   /base64url/2.0.0:
@@ -231,6 +232,7 @@ packages:
     dependencies:
       balanced-match: 1.0.0
       concat-map: 0.0.1
+    dev: false
     resolution:
       integrity: sha1-wHshHHyVLsH479Uad+8NHTmQopI=
   /buffer-equal-constant-time/1.0.1:
@@ -355,6 +357,7 @@ packages:
     resolution:
       integrity: sha1-7/JgPvwuIs+G810uuTWJ+YdTc9s=
   /concat-map/0.0.1:
+    dev: false
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
   /concat-stream/1.6.0:
@@ -772,6 +775,7 @@ packages:
     resolution:
       integrity: sha1-52mJJopsdMOJCLEwWxD8DjlOnQ8=
   /graceful-fs/4.1.11:
+    dev: false
     engines:
       node: '>=0.4.0'
     resolution:
@@ -852,6 +856,7 @@ packages:
     resolution:
       integrity: sha512-v0XCLxICi9nPfYrS9RL8HbYnXi9obYAeLbSP00BmnZwCK9+Ih9WOjoZ8YoHCoav2csqn4FOz4Orldsy2dmDwmQ==
   /hosted-git-info/2.5.0:
+    dev: false
     resolution:
       integrity: sha512-pNgbURSuab90KbTqvRPsseaTxOJCZBD0a7t+haSN33piP9cCM4l0CqdzAif2hUqm716UovKB2ROmiabGAKVXyg==
   /http-errors/1.6.2:
@@ -1201,6 +1206,7 @@ packages:
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.8
+    dev: false
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   /minimist/0.0.10:
@@ -1223,7 +1229,6 @@ packages:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   /moment/2.20.1:
     dev: false
-    optional: true
     resolution:
       integrity: sha512-Yh9y73JRljxW5QxN08Fner68eFLxM5ynNOAw2LbIB1YAGeQzZT8QFSUvkAz609Zf+IHhhaUxqZK8dG3W/+HEvg==
   /ms/2.0.0:
@@ -1317,7 +1322,6 @@ packages:
     dev: false
     engines:
       node: '>=0.10.0'
-    optional: true
     resolution:
       integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   /object-keys/1.0.11:
@@ -1568,6 +1572,7 @@ packages:
     resolution:
       integrity: sha1-gaCY9Efku8P/MxKiQ1IbwGDvWRE=
   /semver/5.5.0:
+    dev: false
     resolution:
       integrity: sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
   /send/0.16.1:
@@ -1986,4 +1991,4 @@ specifiers:
   cpr: ^3.0.1
   npm-run-all: ^4.0.1
   rimraf: ^2.5.4
-  verdaccio: ^2.3.0
+  verdaccio: ^2.7.4
