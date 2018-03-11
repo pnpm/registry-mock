@@ -39,6 +39,10 @@ packages:
     access: $authenticated
     publish: $authenticated
 
+  'plugin-example':
+    access: $all
+    publish: $all
+
   '*':
     # allow all users (including non-authenticated users) to read and
     # publish all packages
