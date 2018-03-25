@@ -32,6 +32,14 @@ packages:
     access: $all
     publish: $all
 
+  'pkg-with-1-dep':
+    access: $all
+    publish: $all
+
+  'dep-of-pkg-with-1-dep':
+    access: $all
+    publish: $all
+
   '**':
     access: $all
     publish: $all
