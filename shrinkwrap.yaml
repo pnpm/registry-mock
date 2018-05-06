@@ -514,6 +514,7 @@ packages:
     engines:
       node: '>=0.10'
     optional: true
+    requiresBuild: true
     resolution:
       integrity: sha1-QooiOv4DQl0s1tY0f99AxmkDVj0=
   /duplexer/0.1.1:
@@ -1985,7 +1986,7 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   anonymous-npm-registry-client: ^0.1.2
