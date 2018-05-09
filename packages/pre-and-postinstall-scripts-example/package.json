@@ -4,6 +4,7 @@
   "description": "A package that creates files by pre- and postinstall scripts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "node create generated-by-prepare",
     "preinstall": "hello-world-js-bin && node create generated-by-preinstall",
     "install": "echo Hi",
     "postinstall": "hello-world-js-bin && node create generated-by-postinstall"
