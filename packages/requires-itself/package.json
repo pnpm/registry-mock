@@ -1,0 +1,8 @@
+{
+  "name": "requires-itself",
+  "version": "1.0.0",
+  "dependencies": {
+    "requires-itself": "1.0.0",
+    "is-positive": "^1.0.0"
+  }
+}
