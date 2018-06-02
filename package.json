@@ -29,6 +29,9 @@
   ],
   "author": "Zoltan Kochan",
   "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
   "bugs": {
     "url": "https://github.com/pnpm/pnpm-registry-mock/issues"
   },
@@ -37,7 +40,7 @@
     "anonymous-npm-registry-client": "^0.1.2",
     "cpr": "^3.0.1",
     "rimraf": "^2.5.4",
-    "verdaccio": "^2.7.4"
+    "verdaccio": "^3.0.2"
   },
   "devDependencies": {
     "npm-run-all": "^4.0.1"
