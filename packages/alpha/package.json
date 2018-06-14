@@ -1,0 +1,7 @@
+{
+  "name": "alpha",
+  "version": "1.0.0",
+  "dependencies": {
+    "has-alpha-as-peer": "^1.0.0"
+  }
+}
