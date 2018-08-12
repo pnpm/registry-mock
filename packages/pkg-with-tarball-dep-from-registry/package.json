@@ -1,0 +1,7 @@
+{
+  "name": "pkg-with-tarball-dep-from-registry",
+  "version": "1.0.0",
+  "dependencies": {
+    "dep-of-pkg-with-1-dep": "http://localhost:4873/dep-of-pkg-with-1-dep/-/dep-of-pkg-with-1-dep-100.0.0.tgz"
+  }
+}
