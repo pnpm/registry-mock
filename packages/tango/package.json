@@ -1,0 +1,7 @@
+{
+  "name": "tango",
+  "version": "1.0.0",
+  "dependencies": {
+    "has-tango-as-peer-dep": "^1.0.0"
+  }
+}
