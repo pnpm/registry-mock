@@ -1,0 +1,8 @@
+{
+  "name": "has-foo-as-dep-and-subdep",
+  "version": "1.0.0",
+  "dependencies": {
+    "foo": "100.0.0",
+    "requires-any-foo": "1.0.0"
+  }
+}

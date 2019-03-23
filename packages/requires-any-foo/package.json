@@ -1,0 +1,7 @@
+{
+  "name": "requires-any-foo",
+  "version": "1.0.0",
+  "dependencies": {
+    "foo": "*"
+  }
+}
