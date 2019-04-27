@@ -1,7 +1,7 @@
 {
   "name": "has-native-dep",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
-    "oniguruma": "7.1.0"
+    "bcrypt": "3.0.6"
   }
 }
