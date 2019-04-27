@@ -1,0 +1,7 @@
+{
+  "name": "has-native-dep",
+  "version": "1.0.0",
+  "dependencies": {
+    "oniguruma": "7.1.0"
+  }
+}
