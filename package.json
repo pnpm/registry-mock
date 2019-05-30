@@ -1,6 +1,6 @@
 {
-  "name": "pnpm-registry-mock",
-  "version": "2.13.1",
+  "name": "@pnpm/registry-mock",
+  "version": "1.0.0",
   "description": "Mock the npm registry",
   "main": "index.js",
   "bin": "bin/pnpm-registry-mock.js",
@@ -30,7 +30,7 @@
   "author": "Zoltan Kochan",
   "license": "MIT",
   "engines": {
-    "node": ">=6"
+    "node": ">=8.15"
   },
   "bugs": {
     "url": "https://github.com/pnpm/pnpm-registry-mock/issues"
@@ -40,7 +40,7 @@
     "anonymous-npm-registry-client": "^0.1.2",
     "cpr": "^3.0.1",
     "rimraf": "^2.5.4",
-    "verdaccio": "^3.0.2"
+    "verdaccio": "^4.0.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.0.1"
