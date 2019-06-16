@@ -1,11 +1,11 @@
-# pnpm-registry-mock
+# @pnpm/registry-mock
 
 > Mock the npm registry
 
 ## Installation
 
 ```sh
-pnpm install pnpm-registry-mock
+pnpm install @pnpm/registry-mock
 ```
 
 ## API
