@@ -2,7 +2,6 @@
 'use strict'
 const cpr = require('cpr')
 const rimraf = require('rimraf')
-const path = require('path')
 const pnpmRegistryMock = require('..')
 const locations = require('../lib/locations')
 
@@ -16,5 +15,5 @@ if (process.argv[2] === 'prepare') {
     err => err && console.error(err)
   )
 } else {
-  pnpmRegistryMock()
+  pnpmRegistryMock({ uplink: process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/' })
 }
