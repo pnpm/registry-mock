@@ -26,7 +26,7 @@ module.exports = function (opts) {
   )
 }
 
-module.exports.addDistTag = require('./lib/addDistTag')
+module.exports.addDistTag = require('./lib/addDistTag')(REGISTRY_MOCK_PORT)
 
 module.exports.getIntegrity = (pkgName, pkgVersion) => {
   return require(path.join(locations.storage(), pkgName, 'package.json')).versions[pkgVersion].dist.integrity
