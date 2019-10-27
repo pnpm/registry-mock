@@ -1,7 +1,6 @@
 dependencies:
   anonymous-npm-registry-client: 0.1.2
   cpr: 3.0.1
-  getopts: 2.2.5
   read-yaml-file: 1.1.0
   rimraf: 3.0.0
   verdaccio: 4.3.4
@@ -906,10 +905,6 @@ packages:
       node: 6.* || 8.* || >= 10.*
     resolution:
       integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
-  /getopts/2.2.5:
-    dev: false
-    resolution:
-      integrity: sha512-9jb7AW5p3in+IiJWhQiZmmwkpLaR/ccTWdWQCtZM66HJcHHLegowh4q4tSD7gouUyeNvFWRavfK9GXosQHDpFA==
   /getpass/0.1.7:
     dependencies:
       assert-plus: 1.0.0
@@ -2713,7 +2708,6 @@ packages:
 specifiers:
   anonymous-npm-registry-client: ^0.1.2
   cpr: ^3.0.1
-  getopts: ^2.2.5
   npm-run-all: ^4.1.5
   read-yaml-file: ^1.1.0
   rimraf: ^3.0.0
