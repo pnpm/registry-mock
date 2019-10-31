@@ -18,4 +18,8 @@ for d in **/package.json; do
   fi
 done
 
+# Verdaccio currently does not support deprecation
+# so we manually modify the metadata
+node deprecate deprecated;
+
 exit $exitstatus

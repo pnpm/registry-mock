@@ -47,6 +47,10 @@ packages:
     access: $all
     publish: $all
 
+  'deprecated':
+    access: $all
+    publish: $all
+
   '**':
     access: $all
     publish: $all

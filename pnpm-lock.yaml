@@ -7,6 +7,7 @@ dependencies:
   write-yaml-file: 3.0.1
 devDependencies:
   npm-run-all: 4.1.5
+  write-json-file: 4.2.0
 lockfileVersion: 5.1
 packages:
   /@verdaccio/commons-api/8.2.0:
@@ -26,18 +27,18 @@ packages:
       npm: '>=2.15.9'
     resolution:
       integrity: sha512-FncTOEL01a8yd6xOcNX1TQgc3pRYxByAI2OaAJHjGu5xxcGoqTo6RrIDU3ILdW2ypjc9Ow/xJLarUkr6zDhyfQ==
-  /@verdaccio/file-locking/8.2.0:
+  /@verdaccio/file-locking/8.3.0:
     dependencies:
       lockfile: 1.0.4
     dev: false
     engines:
       node: '>=8'
     resolution:
-      integrity: sha512-s3gzuRWN2IgaEUPtwsnB24gRRVFaD26fbh+32RN7hcxlqCtZh8s7spKu5cFYCxtyoYkFVFxn3PsJcWkGaKda7Q==
+      integrity: sha512-9kPaQ6HNeAhmkvW0sTj6qhLm2XjmIimUHSJR4w/uChL8f7niyx0wnXV6nMG10EsGjLYte9BG9rfDon4LynGuFQ==
   /@verdaccio/local-storage/8.2.0:
     dependencies:
       '@verdaccio/commons-api': 8.2.0
-      '@verdaccio/file-locking': 8.2.0
+      '@verdaccio/file-locking': 8.3.0
       '@verdaccio/streams': 8.2.0
       async: 3.1.0
       level: 5.0.1
@@ -604,6 +605,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+  /detect-indent/6.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
   /domexception/1.0.1:
     dependencies:
       webidl-conversions: 4.0.2
@@ -945,7 +952,7 @@ packages:
       node: '>=0.4.7'
     hasBin: true
     optionalDependencies:
-      uglify-js: 3.6.4
+      uglify-js: 3.6.5
     resolution:
       integrity: sha512-c0HoNHzDiHpBt4Kqe99N8tdLPKAnGCQ73gYMPWtAYM4PwGnf7xl8PBUHJqh9ijlzt2uQKaSRxbXRt+rZ7M2/kA==
   /har-schema/2.0.0:
@@ -1061,7 +1068,6 @@ packages:
     resolution:
       integrity: sha1-0UD6j2FGWb1lQSMwl92qwlzdmRw=
   /imurmurhash/0.1.4:
-    dev: false
     engines:
       node: '>=0.8.19'
     resolution:
@@ -1124,6 +1130,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
+  /is-plain-obj/2.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-EYisGhpgSCwspmIuRHGjROWTon2Xp8Z7U03Wubk/bTL5TTRC5R1rGVgyjzBrk9+ULdH6cRD06KRcw/xfqhVYKQ==
   /is-regex/1.0.4:
     dependencies:
       has: 1.0.3
@@ -1141,7 +1153,6 @@ packages:
     resolution:
       integrity: sha512-HS8bZ9ox60yCJLH9snBpIwv9pYUAkcuLhSA1oero1UB5y9aiQpRA8y2ex945AOtCZL1lJDeIk3G5LthswI46Lw==
   /is-typedarray/1.0.0:
-    dev: false
     resolution:
       integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
   /isarray/1.0.0:
@@ -1485,7 +1496,6 @@ packages:
   /make-dir/3.0.0:
     dependencies:
       semver: 6.3.0
-    dev: false
     engines:
       node: '>=8'
     resolution:
@@ -2123,7 +2133,6 @@ packages:
     resolution:
       integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
   /semver/6.3.0:
-    dev: false
     hasBin: true
     resolution:
       integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
@@ -2185,13 +2194,20 @@ packages:
     resolution:
       integrity: sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
   /signal-exit/3.0.2:
-    dev: false
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
   /slide/1.1.6:
     dev: false
     resolution:
       integrity: sha1-VusCfWW00tzmyy4tMsTUr8nh1wc=
+  /sort-keys/3.0.0:
+    dependencies:
+      is-plain-obj: 2.0.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-77XUKMiZN5LvQXZ9sgWfJza19AvYIDwaDGwGiULM+B5XYru8Z90Oh06JvqDlJczvjjYvssrV0aK1GI6+YXvn5A==
   /source-map/0.6.1:
     dev: false
     engines:
@@ -2426,14 +2442,13 @@ packages:
   /typedarray-to-buffer/3.1.5:
     dependencies:
       is-typedarray: 1.0.0
-    dev: false
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
   /typedarray/0.0.6:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /uglify-js/3.6.4:
+  /uglify-js/3.6.5:
     dependencies:
       commander: 2.20.3
       source-map: 0.6.1
@@ -2443,7 +2458,7 @@ packages:
     hasBin: true
     optional: true
     resolution:
-      integrity: sha512-9Yc2i881pF4BPGhjteCXQNaXx1DCwm3dtOyBaG2hitHjLWOczw/ki8vD1bqyT3u6K0Ms/FpCShkmfg+FtlOfYA==
+      integrity: sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==
   /unix-crypt-td-js/1.0.0:
     dev: false
     resolution:
@@ -2647,6 +2662,28 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GaETH5wwsX+GcnzhPgKcKjJ6M2Cq3/iZp1WyY/X1CSqrW+jVNM9Y7D8EC2sM4ZG/V8wZlSniJnCKWPmBYAucRQ==
+  /write-file-atomic/3.0.1:
+    dependencies:
+      imurmurhash: 0.1.4
+      is-typedarray: 1.0.0
+      signal-exit: 3.0.2
+      typedarray-to-buffer: 3.1.5
+    dev: true
+    resolution:
+      integrity: sha512-JPStrIyyVJ6oCSz/691fAjFtefZ6q+fP6tm+OS4Qw6o+TGQxNp1ziY2PgS+X/m0V8OWhZiO/m4xSj+Pr4RrZvw==
+  /write-json-file/4.2.0:
+    dependencies:
+      detect-indent: 6.0.0
+      graceful-fs: 4.2.3
+      is-plain-obj: 2.0.0
+      make-dir: 3.0.0
+      sort-keys: 3.0.0
+      write-file-atomic: 3.0.1
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-PUmPZDcQZRO+w69pGGepxt5r8USK3KTDy5758dOAEzDaL5a6gbe5EPkyOfo28DRT/cruPRiMaAy9XZnDHHoBjQ==
   /write-yaml-file/3.0.1:
     dependencies:
       graceful-fs: 4.2.3
@@ -2712,4 +2749,5 @@ specifiers:
   read-yaml-file: ^1.1.0
   rimraf: ^3.0.0
   verdaccio: ^4.3.4
+  write-json-file: ^4.2.0
   write-yaml-file: ^3.0.1
