@@ -1,0 +1,14 @@
+{
+  "name": "abc-optional-peers-meta-only",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "peer-a": "^1.0.0"  },
+  "peerDependenciesMeta": {
+    "peer-b": {
+      "optional": true
+    },
+    "peer-c": {
+      "optional": true
+    }
+  }
+}
