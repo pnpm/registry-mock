@@ -1,25 +1,16 @@
 'use strict'
 const path = require('path')
 const childProcess = require('child_process')
-const readYamlFile = require('read-yaml-file')
-const writeYamlFile = require('write-yaml-file')
 const locations = require('./lib/locations')
-const REGISTRY_MOCK_PORT = process.env['PNPM_REGISTRY_MOCK_PORT'] || '4873'
+const REGISTRY_MOCK_PORT = locations.REGISTRY_MOCK_PORT
 
 module.exports = function (opts) {
-  const config = readYamlFile.sync(path.join(__dirname, 'registry/config.yaml'))
-  const configPath = path.resolve('.pnpm-registry-mock/runtime-config.yaml')
-  writeYamlFile.sync(configPath, {
-    ...config,
-    storage: locations.storage(),
-    uplinks: { npmjs: { url: opts.uplink } }
-  })
   const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
   return childProcess.spawnSync('node',
     [
       verdaccioBin,
       '--config',
-      configPath,
+      locations.configPath(),
       '--listen',
       REGISTRY_MOCK_PORT
     ],
