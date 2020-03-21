@@ -30,7 +30,7 @@
   "author": "Zoltan Kochan",
   "license": "MIT",
   "engines": {
-    "node": ">=8.15"
+    "node": ">=10.13"
   },
   "bugs": {
     "url": "https://github.com/pnpm/pnpm-registry-mock/issues"
