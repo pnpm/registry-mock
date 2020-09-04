@@ -1,0 +1,8 @@
+{
+  "name": "pkg-with-bundle-dependencies-false",
+  "version": "1.0.0",
+  "bundleDependencies": false,
+  "dependencies": {
+    "hello-world-js-bin": "*"
+  }
+}
