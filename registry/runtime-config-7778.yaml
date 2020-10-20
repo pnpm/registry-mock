@@ -1,0 +1,47 @@
+storage: /tmp/66553877e26b48fa8a51c629ccda9d70
+auth:
+  htpasswd:
+    file: ./htpasswd
+middlewares:
+  audit:
+    enabled: true
+uplinks:
+  npmjs:
+    url: 'https://registry.npmjs.org/'
+packages:
+  '@private/*':
+    access: $authenticated
+    publish: $authenticated
+  '@*/*':
+    access: $all
+    publish: $all
+    proxy: npmjs
+  needs-auth:
+    access: $authenticated
+    publish: $authenticated
+  plugin-example:
+    access: $all
+    publish: $all
+  pkg-with-1-dep:
+    access: $all
+    publish: $all
+  dep-of-pkg-with-1-dep:
+    access: $all
+    publish: $all
+  foobar:
+    access: $all
+    publish: $all
+  alpha:
+    access: $all
+    publish: $all
+  deprecated:
+    access: $all
+    publish: $all
+  '**':
+    access: $all
+    publish: $all
+    proxy: npmjs
+logs:
+  - type: stdout
+    format: pretty
+    level: error
