@@ -21,28 +21,28 @@ if (process.argv[2] === 'prepare') {
   writeYamlFile.sync(locations.configPath(), {
     ...config,
     storage,
-    uplinks: { npmjs: {
-      url: process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/' },
-      // performance improvments
-      // https://verdaccio.org/docs/en/uplinks
+    uplinks: {
+      npmjs: {
+        url: process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/',
+        // performance improvements
+        // https://verdaccio.org/docs/en/uplinks
 
-      // avoid go to uplink is offline
-      max_fails: '100',
-      // default is 10 min, avoid hit the registry for metadata
-      maxage: '30m',
-      // increase threshold to avoid uplink is offline
-      fail_timeout: '10m',
-       // increase threshold to avoid uplink is offline
-      timeout: '600s',
-      // pass down to request.js
-        agent_options: {
-          keepAlive: true,
-          maxSockets: 40,
-          maxFreeSockets: 10
-        },
-      // avoid save the tarball to the storage, it helps with performance
-      cache: false,
-     }
+        // avoid go to uplink is offline
+        max_fails: 100,
+        // default is 10 min, avoid hit the registry for metadata
+        maxage: '30m',
+        // increase threshold to avoid uplink is offline
+        fail_timeout: '10m',
+        // increase threshold to avoid uplink is offline
+        timeout: '600s',
+          // pass down to request.js
+          agent_options: {
+            keepAlive: true,
+            maxSockets: 40,
+            maxFreeSockets: 10
+          },
+       }
+    }
   })
 } else {
   pnpmRegistryMock()
