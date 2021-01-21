@@ -1,0 +1,7 @@
+{
+  "name": "build-metadata-in-dep-version",
+  "version": "1.0.0",
+  "dependencies": {
+    "foo": "100.0.0+abcdefg"
+  }
+}
