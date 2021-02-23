@@ -1,0 +1,7 @@
+{
+  "name": "abc-grand-parent",
+  "version": "1.0.0",
+  "dependencies": {
+    "abc-parent-with-ab": "^1.0.0"
+  }
+}
