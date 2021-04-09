@@ -41,8 +41,8 @@
     "cpr": "^3.0.1",
     "read-yaml-file": "^2.0.0",
     "rimraf": "^3.0.2",
-    "tempy": "^0.6.0",
-    "verdaccio": "^4.8.1",
+    "tempy": "^1.0.1",
+    "verdaccio": "^5.0.0",
     "write-yaml-file": "^4.0.0"
   },
   "devDependencies": {
