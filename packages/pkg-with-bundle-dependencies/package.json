@@ -2,7 +2,7 @@
   "name": "pkg-with-bundle-dependencies",
   "version": "1.0.0",
   "scripts": {
-    "prepublish": "npm install --ignore-scripts --no-package-lock"
+    "prepublishOnly": "npm install --ignore-scripts --no-package-lock"
   },
   "bundleDependencies": [
     "hello-world-js-bin"
