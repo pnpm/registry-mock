@@ -1,12 +1,12 @@
 'use strict'
 const path = require('path')
-const childProcess = require('child_process')
+const execa = require('execa')
 const locations = require('./lib/locations')
 const REGISTRY_MOCK_PORT = locations.REGISTRY_MOCK_PORT
 
 module.exports = function (opts) {
   const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
-  return childProcess.spawnSync('node',
+  return execa.sync('node',
     [
       verdaccioBin,
       '--config',
