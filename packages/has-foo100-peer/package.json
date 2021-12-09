@@ -1,0 +1,7 @@
+{
+  "name": "has-foo100-peer",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "foo": "100"
+  }
+}
