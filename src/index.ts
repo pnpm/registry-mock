@@ -3,6 +3,7 @@ import path from 'path'
 import execa from 'execa'
 import * as locations from './lib/locations'
 import _addDistTag from './lib/addDistTag'
+import _addUser from './lib/addUser'
 
 const REGISTRY_MOCK_PORT = locations.REGISTRY_MOCK_PORT
 
@@ -21,6 +22,7 @@ export default function () {
 }
 
 export const addDistTag = _addDistTag(REGISTRY_MOCK_PORT)
+export const addUser = _addUser(REGISTRY_MOCK_PORT)
 
 export const getIntegrity = (pkgName: string, pkgVersion: string) => {
   return JSON.parse(fs.readFileSync(
