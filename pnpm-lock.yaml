@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/node': ^17.0.2
   anonymous-npm-registry-client: ^0.2.0
   cpr: ^3.0.1
   execa: ^5.1.1
@@ -9,6 +10,7 @@ specifiers:
   read-yaml-file: ^2.1.0
   rimraf: ^3.0.2
   tempy: ^1.0.1
+  typescript: ^4.5.4
   verdaccio: ^5.2.2
   write-json-file: ^4.3.0
   write-yaml-file: ^4.2.0
@@ -24,8 +26,10 @@ dependencies:
   write-yaml-file: 4.2.0
 
 devDependencies:
+  '@types/node': 17.0.2
   npm: 7.24.2
   npm-run-all: 4.1.5
+  typescript: 4.5.4
   write-json-file: 4.3.0
 
 packages:
@@ -50,6 +54,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: false
+
+  /@types/node/17.0.2:
+    resolution: {integrity: sha512-JepeIUPFDARgIs0zD/SKPgFsJEAF0X5/qO80llx59gOxFTboS9Amv3S+QfB7lqBId5sFXJ99BN0J6zFRvL9dDA==}
+    dev: true
 
   /@verdaccio/commons-api/10.0.1:
     resolution: {integrity: sha512-dO/3ocK2Cpx5GZ/HST7YWRMVXAZu5zkDglfcoxEnUh2V9D4detGn0sIDV9nCJJJiO70ZmhuOoA5oeUmrA1lELA==}
@@ -2722,6 +2730,12 @@ packages:
   /typedarray/0.0.6:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: false
+
+  /typescript/4.5.4:
+    resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   /uglify-js/3.14.5:
     resolution: {integrity: sha512-qZukoSxOG0urUTvjc2ERMTcAy+BiFh3weWAkeurLwjrCba73poHmG3E36XEjd/JGukMzwTL7uCxZiAexj8ppvQ==}

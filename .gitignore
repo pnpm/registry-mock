@@ -39,3 +39,7 @@ jspm_packages
 registry/storage/*
 registry/storage-cache/*
 registry/runtime-config.yaml
+dist
+tsconfig.tsbuildinfo
+storage-cache
+registry/runtime-config-*.yaml
