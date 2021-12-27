@@ -24,7 +24,7 @@ export default function () {
 export const addDistTag = _addDistTag(REGISTRY_MOCK_PORT)
 export const addUser = _addUser(REGISTRY_MOCK_PORT)
 
-export const getIntegrity = (pkgName: string, pkgVersion: string) => {
+export const getIntegrity = (pkgName: string, pkgVersion: string): string => {
   return JSON.parse(fs.readFileSync(
     path.join(locations.storage(), pkgName, 'package.json'),
     'utf8'
