@@ -12,7 +12,7 @@
     "registry": "verdaccio -c registry/prepublish-config.yaml",
     "prebuild": "rimraf registry/storage-cache/ && rimraf registry/storage/",
     "publish-packages": "sh packages/publish-all.sh",
-    "build": "tsc && npm-run-all -p -r registry publish-packages",
+    "build": "pnpm run prebuild && tsc && npm-run-all -p -r registry publish-packages",
     "prepublishOnly": "pnpm run build"
   },
   "repository": {
