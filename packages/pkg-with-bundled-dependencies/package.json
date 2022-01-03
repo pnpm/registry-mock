@@ -8,6 +8,6 @@
     "hello-world-js-bin"
   ],
   "dependencies": {
-    "hello-world-js-bin": "*"
+    "hello-world-js-bin": "1.0.0"
   }
 }

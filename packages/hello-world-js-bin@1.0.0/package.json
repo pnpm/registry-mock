@@ -6,10 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Zoltan Kochan <zoltan.kochan@gmail.com> (http://kochan.io/)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pnpm/pnpm/tree/master/test/packages/hello-world-js-bin"
+    "url": "https://github.com/pnpm/pnpm/tree/master/test/packages/hello-world-js-bin@1.0.0"
   }
 }
