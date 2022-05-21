@@ -1,0 +1,7 @@
+{
+  "name": "wants-peer-c-1",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "peer-c": "1"
+  }
+}
