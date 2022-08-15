@@ -20,6 +20,6 @@ done
 
 # Verdaccio currently does not support deprecation
 # so we manually modify the metadata
-node deprecate deprecated;
+node deprecate @pnpm.e2e/deprecated;
 
 exit $exitstatus
