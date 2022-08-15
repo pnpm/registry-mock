@@ -1,7 +1,7 @@
 {
-  "name": "requires-any-foo",
+  "name": "@pnpm.e2e/requires-any-foo",
   "version": "1.0.0",
   "dependencies": {
-    "foo": "*"
+    "@pnpm.e2e/foo": "*"
   }
 }

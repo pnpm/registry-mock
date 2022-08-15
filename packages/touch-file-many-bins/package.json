@@ -1,5 +1,5 @@
 {
-  "name": "touch-file-many-bins",
+  "name": "@pnpm.e2e/touch-file-many-bins",
   "version": "1.0.0",
   "bin": {
     "t": "cli.js",

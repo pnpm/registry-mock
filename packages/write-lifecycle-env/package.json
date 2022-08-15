@@ -1,5 +1,5 @@
 {
-  "name": "write-lifecycle-env",
+  "name": "@pnpm.e2e/write-lifecycle-env",
   "version": "1.0.0",
   "description": "Writes process.env to `env.json` during install stage",
   "bin": "index.js",

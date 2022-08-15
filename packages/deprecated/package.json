@@ -1,5 +1,5 @@
 {
-  "name": "deprecated",
+  "name": "@pnpm.e2e/deprecated",
   "version": "1.0.0",
   "homepage": "https://foo.bar/qar"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "peer-deps-in-child-pkg",
+  "name": "@pnpm.e2e/peer-deps-in-child-pkg",
   "version": "1.0.0",
   "peerDependencies": {
     "is-negative": "2.x.x"

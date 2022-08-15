@@ -1,7 +1,7 @@
 {
-  "name": "wants-peer-c-1",
+  "name": "@pnpm.e2e/wants-peer-c-1",
   "version": "1.0.0",
   "peerDependencies": {
-    "peer-c": "1"
+    "@pnpm.e2e/peer-c": "1"
   }
 }

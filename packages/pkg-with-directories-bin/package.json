@@ -1,5 +1,5 @@
 {
-  "name": "pkg-with-directories-bin",
+  "name": "@pnpm.e2e/pkg-with-directories-bin",
   "version": "1.0.0",
   "description": "A package with a bin specified in the directories property",
   "directories": {

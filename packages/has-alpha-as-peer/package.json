@@ -1,10 +1,10 @@
 {
-  "name": "has-alpha-as-peer",
+  "name": "@pnpm.e2e/has-alpha-as-peer",
   "version": "1.0.0",
   "scripts": {
     "postinstall": "exit 0"
   },
   "peerDependencies": {
-    "alpha": "^1.0.0"
+    "@pnpm.e2e/alpha": "^1.0.0"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "tango",
+  "name": "@pnpm.e2e/tango",
   "version": "1.0.0",
   "dependencies": {
-    "has-tango-as-peer-dep": "^1.0.0"
+    "@pnpm.e2e/has-tango-as-peer-dep": "^1.0.0"
   }
 }

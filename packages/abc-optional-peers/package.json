@@ -1,16 +1,16 @@
 {
-  "name": "abc-optional-peers",
+  "name": "@pnpm.e2e/abc-optional-peers",
   "version": "1.0.0",
   "peerDependencies": {
-    "peer-a": "^1.0.0",
-    "peer-b": "^1.0.0",
-    "peer-c": "^1.0.0"
+    "@pnpm.e2e/peer-a": "^1.0.0",
+    "@pnpm.e2e/peer-b": "^1.0.0",
+    "@pnpm.e2e/peer-c": "^1.0.0"
   },
   "peerDependenciesMeta": {
-    "peer-b": {
+    "@pnpm.e2e/peer-b": {
       "optional": true
     },
-    "peer-c": {
+    "@pnpm.e2e/peer-c": {
       "optional": true
     }
   }

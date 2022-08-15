@@ -1,5 +1,5 @@
 {
-  "name": "plugin-example",
+  "name": "@pnpm.e2e/plugin-example",
   "version": "1.0.0",
   "author": "Zoltan Kochan <zoltan.kochan@gmail.com> (http://kochan.io/)",
   "license": "MIT",

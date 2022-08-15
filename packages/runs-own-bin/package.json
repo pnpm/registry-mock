@@ -1,5 +1,5 @@
 {
-  "name": "runs-own-bin",
+  "name": "@pnpm.e2e/runs-own-bin",
   "version": "1.0.0",
   "bin": "bin.js",
   "scripts": {

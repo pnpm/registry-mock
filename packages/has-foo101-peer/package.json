@@ -1,7 +1,7 @@
 {
-  "name": "has-foo101-peer",
+  "name": "@pnpm.e2e/has-foo101-peer",
   "version": "1.0.0",
   "peerDependencies": {
-    "foo": "101"
+    "@pnpm.e2e/foo": "101"
   }
 }

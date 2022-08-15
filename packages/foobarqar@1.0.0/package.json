@@ -1,9 +1,9 @@
 {
-  "name": "foobarqar",
+  "name": "@pnpm.e2e/foobarqar",
   "version": "1.0.0",
   "dependencies": {
-    "foo": "^100.0.0",
-    "bar": "100.0.0",
+    "@pnpm.e2e/foo": "^100.0.0",
+    "@pnpm.e2e/bar": "100.0.0",
     "is-positive": "*"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "failing-postinstall",
+  "name": "@pnpm.e2e/failing-postinstall",
   "version": "1.0.0",
   "scripts": {
     "postinstall": "exit 1"

@@ -1,5 +1,5 @@
 {
-  "name": "independent-and-requires-build",
+  "name": "@pnpm.e2e/independent-and-requires-build",
   "version": "1.0.0",
   "description": "This package should have no deps and should have a postinstall script",
   "scripts": {

@@ -1,7 +1,7 @@
 {
-  "name": "build-metadata-in-dep-version",
+  "name": "@pnpm.e2e/build-metadata-in-dep-version",
   "version": "1.0.0",
   "dependencies": {
-    "foo": "100.0.0+abcdefg"
+    "@pnpm.e2e/foo": "100.0.0+abcdefg"
   }
 }

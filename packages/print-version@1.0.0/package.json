@@ -1,5 +1,5 @@
 {
-  "name": "print-version",
+  "name": "@pnpm.e2e/print-version",
   "version": "1.0.0",
   "bin": "bin.js"
 }

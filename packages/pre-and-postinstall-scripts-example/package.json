@@ -1,5 +1,5 @@
 {
-  "name": "pre-and-postinstall-scripts-example",
+  "name": "@pnpm.e2e/pre-and-postinstall-scripts-example",
   "version": "1.0.0",
   "description": "A package that creates files by pre- and postinstall scripts",
   "scripts": {
@@ -16,6 +16,6 @@
     "url": "https://github.com/pnpm/pnpm/tree/master/test/packages/postinstall-example"
   },
   "dependencies": {
-    "hello-world-js-bin": "1.0.0"
+    "@pnpm.e2e/hello-world-js-bin": "1.0.0"
   }
 }

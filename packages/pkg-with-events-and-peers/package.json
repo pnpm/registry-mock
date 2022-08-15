@@ -1,5 +1,5 @@
 {
-  "name": "pkg-with-events-and-peers",
+  "name": "@pnpm.e2e/pkg-with-events-and-peers",
   "version": "1.0.0",
   "description": "A package that creates files by pre- and postinstall scripts",
   "scripts": {
@@ -14,9 +14,9 @@
     "url": "https://github.com/pnpm/pnpm/tree/master/test/packages/postinstall-example"
   },
   "dependencies": {
-    "hello-world-js-bin": "1.0.0"
+    "@pnpm.e2e/hello-world-js-bin": "1.0.0"
   },
   "peerDependencies": {
-    "peer-c": "*"
+    "@pnpm.e2e/peer-c": "*"
   }
 }

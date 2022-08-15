@@ -1,4 +1,4 @@
 {
-  "name": "peer-a",
+  "name": "@pnpm.e2e/peer-a",
   "version": "1.0.1"
 }

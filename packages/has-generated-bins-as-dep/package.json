@@ -1,7 +1,7 @@
 {
-  "name": "has-generated-bins-as-dep",
+  "name": "@pnpm.e2e/has-generated-bins-as-dep",
   "version": "1.0.0",
   "dependencies": {
-    "generated-bins": "1.0.0"
+    "@pnpm.e2e/generated-bins": "1.0.0"
   }
 }

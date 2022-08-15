@@ -1,14 +1,14 @@
 {
-  "name": "pkg-with-resolved-peer",
+  "name": "@pnpm.e2e/pkg-with-resolved-peer",
   "version": "1.0.0",
   "peerDependencies": {
-    "peer-b": "*",
-    "peer-c": "*"
+    "@pnpm.e2e/peer-b": "*",
+    "@pnpm.e2e/peer-c": "*"
   },
   "dependencies": {
-    "peer-c": "^1.0.0"
+    "@pnpm.e2e/peer-c": "^1.0.0"
   },
   "optionalDependencies": {
-    "peer-b": "^1.0.0"
+    "@pnpm.e2e/peer-b": "^1.0.0"
   }
 }

@@ -1,4 +1,4 @@
 {
-  "name": "symlinks-preserved",
+  "name": "@pnpm.e2e/symlinks-preserved",
   "version": "1.0.0"
 }

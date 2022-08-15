@@ -1,5 +1,5 @@
 {
-  "name": "has-say-hi-peer",
+  "name": "@pnpm.e2e/has-say-hi-peer",
   "version": "1.0.0",
   "peerDependencies": {
     "say-hi": "*"

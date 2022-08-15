@@ -1,5 +1,5 @@
 {
-  "name": "install-script-example",
+  "name": "@pnpm.e2e/install-script-example",
   "version": "1.0.0",
   "description": "A package that creates a file by an install script",
   "scripts": {

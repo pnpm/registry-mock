@@ -1,5 +1,5 @@
 {
-  "name": "using-ajv",
+  "name": "@pnpm.e2e/using-ajv",
   "version": "1.0.0",
   "dependencies": {
     "ajv": "4.10.4",

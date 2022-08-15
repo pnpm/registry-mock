@@ -1,10 +1,10 @@
 {
-  "name": "pkg-with-duplicated-dep",
+  "name": "@pnpm.e2e/pkg-with-duplicated-dep",
   "version": "1.0.0",
   "dependencies": {
-    "dep-of-pkg-with-1-dep": "100.0.0"
+    "@pnpm.e2e/dep-of-pkg-with-1-dep": "100.0.0"
   },
   "devDependencies": {
-    "dep-of-pkg-with-1-dep": "100.0.0"
+    "@pnpm.e2e/dep-of-pkg-with-1-dep": "100.0.0"
   }
 }

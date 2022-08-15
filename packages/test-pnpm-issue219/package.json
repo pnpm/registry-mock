@@ -1,5 +1,5 @@
 {
-  "name": "test-pnpm-issue219",
+  "name": "@pnpm.e2e/test-pnpm-issue219",
   "version": "1.0.3",
   "description": "",
   "main": "index.js",

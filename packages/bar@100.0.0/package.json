@@ -1,4 +1,4 @@
 {
-  "name": "bar",
+  "name": "@pnpm.e2e/bar",
   "version": "100.0.0"
 }
