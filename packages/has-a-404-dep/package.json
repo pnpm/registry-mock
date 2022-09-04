@@ -1,7 +1,0 @@
-{
-  "name": "@pnpm.e2e/has-a-404-dep",
-  "version": "1.0.0",
-  "dependencies": {
-    "@pnpm.e2e/this-does-not-exist": "^1.0.0"
-  }
-}
