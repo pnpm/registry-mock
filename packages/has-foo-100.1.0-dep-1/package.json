@@ -2,6 +2,6 @@
   "name": "@pnpm.e2e/has-foo-100.1.0-dep-1",
   "version": "1.0.0",
   "dependencies": {
-    "foo": "100.1.0"
+    "@pnpm.e2e/foo": "100.1.0"
   }
 }
