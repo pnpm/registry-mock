@@ -19,12 +19,11 @@ jobs:
         uses: actions/checkout@v3
       - name: install pnpm and npm
         run: |
-          curl -L https://get.pnpm.io/v6.16.js | node - add --global pnpm@next-7 npm@7
+          corepack enable
+          corepack prepare pnpm@next-7 --activate
       - name: pnpm install
         run: pnpm install
       - name: Publish Packages
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}" # pnpm config set should be fixed
-          pnpm publish
+          "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish
