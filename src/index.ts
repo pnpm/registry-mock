@@ -3,7 +3,7 @@ import path from 'path'
 import execa from 'execa'
 import { sync as readYamlFile } from 'read-yaml-file'
 import writeYamlFile from 'write-yaml-file'
-import cpr from 'cpr'
+import fsx from 'fs-extra'
 import * as locations from './lib/locations'
 import _addDistTag from './lib/addDistTag'
 import _addUser from './lib/addUser'
@@ -55,12 +55,7 @@ export function prepare () {
   const storage = tempy.directory()
 
   const storageCache = locations.storageCache()
-  cpr(
-    storageCache,
-    storage,
-    {},
-    (err: Error | null) => err && console.error(err)
-  )
+  fsx.copySync(storageCache, storage)
   const config = readYamlFile<any>(path.join(__dirname, '../registry/config.yaml'))
   writeYamlFile.sync(locations.configPath(), {
     ...config,
