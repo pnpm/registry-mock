@@ -61,7 +61,7 @@ export function prepare () {
     {},
     (err: Error | null) => err && console.error(err)
   )
-  const config = readYamlFile<any>(path.join(__dirname, '../../registry/config.yaml'))
+  const config = readYamlFile<any>(path.join(__dirname, '../registry/config.yaml'))
   writeYamlFile.sync(locations.configPath(), {
     ...config,
     storage,
