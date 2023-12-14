@@ -6,8 +6,6 @@
     "prepublishOnly": "npm install --ignore-scripts --no-package-lock"
   },
   "dependencies": {
-    "@pnpm/x": "^1.0.0",
-    "@pnpm/y": "^1.0.0",
-    "@pnpm/z": "^1.0.0"
+    "@pnpm.e2e/hello-world-js-bin": "*"
   }
 }
