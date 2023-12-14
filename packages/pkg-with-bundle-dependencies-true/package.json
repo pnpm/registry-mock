@@ -1,0 +1,10 @@
+{
+  "name": "@pnpm.e2e/pkg-with-bundle-dependencies-true",
+  "version": "1.0.0",
+  "bundleDependencies": true,
+  "dependencies": {
+    "@pnpm/x": "^1.0.0",
+    "@pnpm/y": "^1.0.0",
+    "@pnpm/z": "^1.0.0"
+  }
+}
