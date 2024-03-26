@@ -1,0 +1,8 @@
+{
+  "name": "@pnpm.e2e/abc-regular-deps",
+  "dependencies": {
+    "@pnpm.e2e/peer-a": "1.0.0",
+    "@pnpm.e2e/peer-b": "1.0.0",
+    "@pnpm.e2e/peer-c": "1.0.0"
+  }
+}
