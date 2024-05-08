@@ -20,7 +20,7 @@ jobs:
       - name: install pnpm and npm
         run: |
           corepack enable
-          corepack prepare pnpm@latest-8 --activate
+          corepack prepare pnpm@latest-9 --activate
       - name: pnpm install
         run: pnpm install
       - name: Publish Packages
