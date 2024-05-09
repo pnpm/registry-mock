@@ -1,0 +1,10 @@
+{
+  "name": "@pnpm.e2e/with-overridden-deps",
+  "version": "0.0.0",
+  "dependencies": {
+    "@pnpm.e2e/overridden-dep-a": "1.0.0",
+    "@pnpm.e2e/overridden-dep-b": "1.0.0",
+    "@pnpm.e2e/overridden-dep-c": "1.0.0",
+    "@pnpm.e2e/overridden-dep-d": "1.0.0"
+  }
+}
