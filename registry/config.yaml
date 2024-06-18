@@ -22,14 +22,14 @@ packages:
     access: $authenticated
     publish: $authenticated
 
+  '@pnpm.e2e/needs-auth':
+    access: $authenticated
+    publish: $authenticated
+
   '@*/*':
     access: $all
     publish: $all
     proxy: npmjs
-
-  'needs-auth':
-    access: $authenticated
-    publish: $authenticated
 
   'plugin-example':
     access: $all
