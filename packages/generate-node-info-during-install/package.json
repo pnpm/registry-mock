@@ -6,5 +6,7 @@
     "install": "node generate-node-info.js"
   },
   "index": "read-generated-node-info.js",
-  "bin": "print-generated-node-info.js"
+  "bin": {
+    "print-generated-node-info": "print-generated-node-info.js"
+  }
 }
