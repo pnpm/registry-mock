@@ -1,0 +1,12 @@
+{
+  "name": "@pnpm.e2e/has-pnpm-use-node-version",
+  "version": "1.0.0",
+  "description": "The package.json defines a pnpm.useNodeVersion",
+  "scripts": {
+    "install": "node generate-node-info.js"
+  },
+  "index": "read-generated-node-info.js",
+  "pnpm": {
+    "useNodeVersion": "20.0.0"
+  }
+}
