@@ -24,18 +24,24 @@ export default function () {
   )
 }
 
-export function start (opts: execa.Options) {
+export function start (opts: execa.Options & { useNodeVersion?: string }) {
   const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
-  return execa('node',
-    [
-      verdaccioBin,
-      '--config',
-      locations.configPath(),
-      '--listen',
-      REGISTRY_MOCK_PORT
-    ],
-    opts
-  )
+  const args = [
+    verdaccioBin,
+    '--config',
+    locations.configPath(),
+    '--listen',
+    REGISTRY_MOCK_PORT
+  ]
+  if (opts.useNodeVersion) {
+    return execa('pnpm', [
+      `--use-node-version=${opts.useNodeVersion}`,
+      'exec',
+      'node',
+      ...args,
+    ], opts)
+  }
+  return execa('node', args, opts)
 }
 
 export const addDistTag = _addDistTag(REGISTRY_MOCK_PORT)
