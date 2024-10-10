@@ -17,6 +17,9 @@ uplinks:
   npmjs:
     url: https://registry.npmjs.org/
 
+web:
+  enable: false
+
 packages:
   '@private/*':
     access: $authenticated
