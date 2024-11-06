@@ -56,7 +56,11 @@ export const getIntegrity = (pkgName: string, pkgVersion: string): string => {
 
 export { REGISTRY_MOCK_PORT }
 
-export function prepare () {
+export interface PrepareOptions {
+  uplinkedRegistry?: string
+}
+
+export function prepare (opts?: PrepareOptions) {
   const tempy = require('tempy')
   const storage = tempy.directory()
 
@@ -68,7 +72,7 @@ export function prepare () {
     storage,
     uplinks: {
       npmjs: {
-        url: process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/',
+        url: opts?.uplinkedRegistry || process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/',
         // performance improvements
         // https://verdaccio.org/docs/en/uplinks
 
