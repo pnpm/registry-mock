@@ -25,5 +25,8 @@ jobs:
         run: pnpm install
       - name: Publish Packages
         env:
-          "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish
+          # setting the "npm_config_//registry.npmjs.org/:_authToken" env variable directly doesn't work.
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}" # pnpm config set is broken
+          pnpm publish
