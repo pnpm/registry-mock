@@ -17,10 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: install pnpm and npm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest-9 --activate
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest-10
+          standalone: true
       - name: pnpm install
         run: pnpm install
       - name: Publish Packages
