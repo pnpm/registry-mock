@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       anonymous-npm-registry-client:
-        specifier: ^0.3.1
-        version: 0.3.1
+        specifier: ^0.3.2
+        version: 0.3.2
       execa:
         specifier: ^5.1.1
         version: 5.1.1
@@ -76,6 +76,9 @@ packages:
 
   '@postman/tunnel-agent@0.6.4':
     resolution: {integrity: sha512-CJJlq8V7rNKhAw4sBfjixKpJW00SHqebqNUQKxMoepgeWZIbdPcD+rguRcivGhS4N12PymDcKgUgSD4rVC+RjQ==}
+
+  '@qiwi/npm-types@1.0.3':
+    resolution: {integrity: sha512-fHUud+Fo8JiGOPMmnVaOYd/crEnBM+qB8qXrSRz1AkYZAj8BtudFYcsiFweL6DcYXguq7+iXKdzx42dGCEPHiQ==}
 
   '@types/fs-extra@11.0.1':
     resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
@@ -147,8 +150,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  anonymous-npm-registry-client@0.3.1:
-    resolution: {integrity: sha512-wv2qaQFEmOZ/B8Cla66TxwwNC2k1ShIpV88M4fgcVGJhFt5eOYWZZefCxrpZoiyyJt6TwYg//MS4hpYoi7H8XQ==}
+  anonymous-npm-registry-client@0.3.2:
+    resolution: {integrity: sha512-Cw96dHAq3W/xVBNkPwLiTZnIbLgNXbmIxFAh63x8LjeaRVEGjMnZ6X/u7xSuqRqbig5jrYWJp5UTgRoXKUotVQ==}
 
   ansi-regex@2.1.1:
     resolution: {integrity: sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==}
@@ -1896,6 +1899,8 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
+  '@qiwi/npm-types@1.0.3': {}
+
   '@types/fs-extra@11.0.1':
     dependencies:
       '@types/jsonfile': 6.1.1
@@ -1984,8 +1989,9 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  anonymous-npm-registry-client@0.3.1:
+  anonymous-npm-registry-client@0.3.2:
     dependencies:
+      '@qiwi/npm-types': 1.0.3
       concat-stream: 2.0.0
       graceful-fs: 4.2.11
       normalize-package-data: 3.0.3
