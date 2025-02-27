@@ -2,7 +2,7 @@
   "name": "@pnpm.e2e/using-ajv",
   "version": "1.0.0",
   "dependencies": {
-    "ajv": "4.10.4",
+    "ajv": "6.12.3",
     "ajv-keywords": "1.5.0"
   }
 }
