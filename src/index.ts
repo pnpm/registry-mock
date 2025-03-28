@@ -24,14 +24,14 @@ export default function () {
   )
 }
 
-export function start (opts: execa.Options & { useNodeVersion?: string }) {
+export function start (opts: execa.Options & { useNodeVersion?: string, listen?: string }) {
   const verdaccioBin = require.resolve('verdaccio/bin/verdaccio')
   const args = [
     verdaccioBin,
     '--config',
     locations.configPath(),
     '--listen',
-    REGISTRY_MOCK_PORT
+    opts.listen ?? REGISTRY_MOCK_PORT
   ]
   if (opts.useNodeVersion) {
     return execa('pnpm', [
