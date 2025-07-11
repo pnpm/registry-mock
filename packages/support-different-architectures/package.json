@@ -1,6 +1,10 @@
 {
   "name": "@pnpm.e2e/support-different-architectures",
   "version": "1.0.0",
+  "index": "index.js",
+  "bin": {
+    "get-optional-dependencies": "bin/get-optional-dependencies.js"
+  },
   "optionalDependencies": {
     "@pnpm.e2e/only-darwin-arm64": "1.0.0",
     "@pnpm.e2e/only-darwin-x64": "1.0.0",
