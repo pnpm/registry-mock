@@ -24,6 +24,8 @@ function getOptionalDependencies () {
     }
   }
 
+  notInstalled.sort()
+
   return { installed, notInstalled }
 }
 
