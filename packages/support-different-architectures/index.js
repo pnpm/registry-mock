@@ -11,10 +11,7 @@ function getOptionalDependencies () {
 
   for (const packageName in optionalDependencies) {
     try {
-      installed[packageName] = {
-        path: require.resolve(packageName),
-        manifest: require(`${packageName}/package.json`),
-      }
+      installed[packageName] = require(`${packageName}/package.json`)
     } catch (error) {
       if (error.code === 'MODULE_NOT_FOUND') {
         notInstalled.push(packageName)
