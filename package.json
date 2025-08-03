@@ -41,7 +41,7 @@
     "read-yaml-file": "^2.1.0",
     "rimraf": "^3.0.2",
     "tempy": "^1.0.1",
-    "verdaccio": "5.20.1",
+    "verdaccio": "5.26.0",
     "write-yaml-file": "^4.2.0"
   },
   "devDependencies": {

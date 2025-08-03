@@ -1,1 +1,1 @@
-// foo.js
+// Foo.js
