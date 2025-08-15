@@ -65,5 +65,6 @@ packages:
 
 # log settings
 logs:
-  - {type: stdout, format: pretty, level: error}
-  #- {type: file, path: verdaccio.log, level: info}
+  type: stdout
+  format: pretty
+  level: error
