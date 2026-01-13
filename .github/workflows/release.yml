@@ -23,7 +23,9 @@ jobs:
           version: latest-10
           standalone: true
       - name: npm install
-        run: pnpm install --global npm@11.6.2
+        run: |
+          pnpm install --global npm@11.6.2
+          npm -v
       - name: pnpm install
         run: pnpm install
       - name: Publish Packages
