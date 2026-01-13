@@ -35,9 +35,8 @@ export function start (opts: execa.Options & { useNodeVersion?: string, listen?:
   ]
   if (opts.useNodeVersion) {
     return execa('pnpm', [
-      `--use-node-version=${opts.useNodeVersion}`,
-      'exec',
-      'node',
+      'dlx',
+      `node@runtime:${opts.useNodeVersion}`,
       ...args,
     ], opts)
   }
