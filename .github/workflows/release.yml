@@ -7,12 +7,10 @@ on:
 
 permissions:
   id-token: write  # Required for OIDC
-  contents: read
+  contents: write  # for softprops/action-gh-release to create GitHub release
 
 jobs:
   build:
-    permissions:
-      contents: write  # for softprops/action-gh-release to create GitHub release
     runs-on: ubuntu-latest
     environment: release
     steps:
