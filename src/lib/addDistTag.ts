@@ -1,9 +1,10 @@
 // @ts-ignore
 import RegClient from 'anonymous-npm-registry-client'
+import { quietLog } from './quietLog'
 
 export default function (port: number | string) {
   return (opts: { package: string, version: string, distTag: string }) => {
-    const client = new RegClient()
+    const client = new RegClient({ log: quietLog })
 
     // just to make verdaccio cache the package
     return new Promise<void>((resolve, reject) => {
