@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "bundleDependencies": true,
   "scripts": {
-    "prepublishOnly": "pnpm install --ignore-scripts --no-package-lock --node-linker=hoisted"
+    "prepublishOnly": "pnpm install --ignore-scripts --no-lockfile --node-linker=hoisted"
   },
   "dependencies": {
     "@pnpm.e2e/hello-world-js-bin": "*"
