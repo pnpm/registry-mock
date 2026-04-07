@@ -22,7 +22,7 @@ done
 
 # Verdaccio currently does not support deprecation
 # so we manually modify the metadata
-node deprecate @pnpm.e2e/deprecated;
-node update-time.js
+node deprecate.cjs @pnpm.e2e/deprecated;
+node update-time.cjs
 
 exit $exitstatus
