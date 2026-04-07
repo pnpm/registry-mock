@@ -57,5 +57,12 @@
   },
   "peerDependencies": {
     "verdaccio": "^5.20.1 || ^6.1.6"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.0.0-beta.7",
+      "onFail": "download"
+    }
   }
 }
