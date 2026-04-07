@@ -13,7 +13,7 @@ for d in **/package.json; do
   # Use npm pack for packages that contain raw catalog: protocol specs,
   # since pnpm publish would try to resolve them.
   if grep -q '"catalog:' package.json; then
-    tarball=$(npm pack --pack-destination ..)
+    tarball=$(npm pack --ignore-scripts --pack-destination ..)
     pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ "../$tarball" || exitstatus=$?;
     rm -f "../$tarball"
   else
