@@ -4,7 +4,9 @@ set -e;
 
 cd packages;
 export pnpm_config_registry=http://localhost:4873/;
+export npm_config_registry=http://localhost:4873/;
 pnpm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
+npm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
 
 exitstatus=0
 
