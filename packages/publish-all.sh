@@ -10,9 +10,7 @@ exitstatus=0
 
 for d in **/package.json; do
   cd $(dirname $d);
-  # We need to use "npm publish" here in order to publish "@pnpm.e2e/has-pnpm-use-node-version" with the "pnpm.useNodeVersion" field.
-  # pnpm would remove the field but we need it for testing.
-  pnpm publish --no-git-checks --config.engine-strict=false --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
+  pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
   cd ..;
   if [ $exitstatus -ne 0 ]; then
     break;
