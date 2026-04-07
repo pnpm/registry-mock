@@ -1,2 +1,2 @@
 minimumReleaseAge: 0
-nodeLinker: hoist
+nodeLinker: hoisted
