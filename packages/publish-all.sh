@@ -3,27 +3,22 @@
 set -e;
 
 cd packages;
-export pnpm_config_registry=http://localhost:4873/;
 export npm_config_registry=http://localhost:4873/;
-pnpm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
 npm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
-
-# Write .npmrc so lifecycle scripts spawned by pnpm also use the local registry
-echo "registry=http://localhost:4873/" > .npmrc
-echo "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY" >> .npmrc
 
 exitstatus=0
 
 for d in **/package.json; do
   cd $(dirname $d);
-  # Use npm pack for packages that contain raw catalog: protocol specs,
-  # since pnpm publish would try to resolve them.
+  # Use npm pack + pnpm publish for packages with raw catalog: protocol specs,
+  # since pnpm publish from a directory would try to resolve them.
+  # All other packages use npm publish to preserve special fields like pnpm.useNodeVersion.
   if grep -q '"catalog:' package.json; then
     tarball=$(npm pack --ignore-scripts --pack-destination ..)
-    pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ "../$tarball" || exitstatus=$?;
+    pnpm publish --no-git-checks --registry=http://localhost:4873/ "../$tarball" || exitstatus=$?;
     rm -f "../$tarball"
   else
-    pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
+    npm publish --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
   fi
   cd ..;
   if [ $exitstatus -ne 0 ]; then
