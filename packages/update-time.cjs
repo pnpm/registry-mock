@@ -14,12 +14,25 @@ for (const entry of fs.readdirSync(storageCache, { recursive: true })) {
   const metaFilePath = path.join(storageCache, entry)
   try {
     const meta = JSON.parse(fs.readFileSync(metaFilePath, 'utf8'))
-    if (!meta.time) continue
-    for (const key of Object.keys(meta.time)) {
-      if (key === 'created' || key === 'modified') continue
-      meta.time[key] = OLD_DATE
+    let changed = false
+    if (meta.time) {
+      for (const key of Object.keys(meta.time)) {
+        if (key === 'created' || key === 'modified') continue
+        meta.time[key] = OLD_DATE
+      }
+      changed = true
     }
-    fs.writeFileSync(metaFilePath, JSON.stringify(meta, null, 2), 'utf8')
+    // Verdaccio 6's abbreviated metadata only includes "bundleDependencies" (without the "d"),
+    // so copy "bundledDependencies" to "bundleDependencies" to ensure it's served correctly.
+    for (const version of Object.values(meta.versions ?? {})) {
+      if (version.bundledDependencies && !version.bundleDependencies) {
+        version.bundleDependencies = version.bundledDependencies
+        changed = true
+      }
+    }
+    if (changed) {
+      fs.writeFileSync(metaFilePath, JSON.stringify(meta, null, 2), 'utf8')
+    }
   } catch {}
 }
 
