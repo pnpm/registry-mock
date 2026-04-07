@@ -1,5 +1,6 @@
 # path to a directory with all packages
 storage: ./storage
+secret: pnpm-registry-mock-secret-key-32
 
 auth:
   htpasswd:
@@ -7,6 +8,8 @@ auth:
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
     #max_users: 1000
+
+plugins: ../node_modules
 
 middlewares:
   audit:
@@ -31,40 +34,40 @@ packages:
 
   '@*/*':
     access: $all
-    publish: $all
+    publish: $authenticated
     proxy: npmjs
 
   'plugin-example':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   'pkg-with-1-dep':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   'dep-of-pkg-with-1-dep':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   'foobar':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   'alpha':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   'deprecated':
     access: $all
-    publish: $all
+    publish: $authenticated
 
   '**':
     access: $all
-    publish: $all
+    publish: $authenticated
     proxy: npmjs
 
 # log settings
 logs:
-  type: stdout
-  format: pretty
-  level: error
+  - type: stdout
+    format: pretty
+    level: error

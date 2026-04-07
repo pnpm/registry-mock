@@ -1,11 +1,14 @@
 import path from 'path'
+import { createRequire } from 'module'
 import execa from 'execa'
-import { sync as readYamlFile } from 'read-yaml-file'
-import writeYamlFile from 'write-yaml-file'
 import fsx from 'fs-extra'
-import * as locations from './lib/locations'
-import _addDistTag from './lib/addDistTag'
-import _addUser from './lib/addUser'
+import writeYamlFile from 'write-yaml-file'
+import * as locations from './lib/locations.js'
+import _addDistTag from './lib/addDistTag.js'
+import _addUser from './lib/addUser.js'
+
+const require = createRequire(import.meta.url)
+const readYamlFileSync = require('read-yaml-file').sync as <T>(path: string) => T
 
 const REGISTRY_MOCK_PORT = locations.REGISTRY_MOCK_PORT
 
@@ -65,22 +68,17 @@ export const getIntegrity = (pkgName: string, pkgVersion: string): string => {
       ) {
         throw err
       }
-      // If verdaccio downloads a package from the uplink registry because it wasn't present, it
-      // will respond to the HTTP request before it finishes writing the package.json file to the
-      // storage directory. There is also a window where the package.json file may exist but be empty 
-      // (see https://github.com/verdaccio/verdaccio/blob/ae0dbff9a549216bf54a0e1646db6bb743a0c960/packages/plugins/local-storage/src/local-fs.ts#L174-L187).
-      // To handle this gracefully, retry reading the file with an exponential backoff strategy if
-      // we encounter a syntax error or file not found error.
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, delay)
       delay *= 2
     }
   }
-  // content should always be defined here, but check just in case
   if (!content) throw new Error(`Failed to read package.json for ${pkgName}@${pkgVersion} after ${maxRetries} attempts`)
   return content.versions[pkgVersion].dist.integrity
 }
 
 export { REGISTRY_MOCK_PORT }
+
+export { REGISTRY_MOCK_CREDENTIALS } from './lib/credentials.js'
 
 export interface PrepareOptions {
   uplinkedRegistry?: string
@@ -92,25 +90,18 @@ export function prepare (opts?: PrepareOptions) {
 
   const storageCache = locations.storageCache()
   fsx.copySync(storageCache, storage)
-  const config = readYamlFile<any>(path.join(__dirname, '../registry/config.yaml'))
+  const config = readYamlFileSync<any>(path.join(import.meta.dirname, '../registry/config.yaml'))
   writeYamlFile.sync(locations.configPath(), {
     ...config,
     storage,
+    plugins: path.join(import.meta.dirname, '..', 'node_modules'),
     uplinks: {
       npmjs: {
         url: opts?.uplinkedRegistry || process.env['PNPM_REGISTRY_MOCK_UPLINK'] || 'https://registry.npmjs.org/',
-        // performance improvements
-        // https://verdaccio.org/docs/en/uplinks
-
-        // avoid go to uplink is offline
         max_fails: 100,
-        // default is 10 min, avoid hit the registry for metadata
         maxage: '30m',
-        // increase threshold to avoid uplink is offline
         fail_timeout: '10m',
-        // increase threshold to avoid uplink is offline
         timeout: '600s',
-          // pass down to request.js
           agent_options: {
             keepAlive: true,
             maxSockets: 40,

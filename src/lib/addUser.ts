@@ -1,6 +1,6 @@
 // @ts-ignore
 import RegClient from 'anonymous-npm-registry-client'
-import { quietLog } from './quietLog'
+import { quietLog } from './quietLog.js'
 
 export default function (port: number | string) {
   const client = new RegClient({ log: quietLog })
