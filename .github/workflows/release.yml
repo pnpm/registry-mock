@@ -26,4 +26,4 @@ jobs:
       - name: pnpm install
         run: pnpm install
       - name: Publish Packages
-        run: pnpm publish
+        run: pnpm publish --no-git-checks
