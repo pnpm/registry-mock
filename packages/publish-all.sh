@@ -7,6 +7,10 @@ export pnpm_config_registry=http://localhost:4873/;
 export npm_config_registry=http://localhost:4873/;
 pnpm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
 
+# .npmrc needed because pnpm overrides npm_config_ env vars in lifecycle scripts
+echo "registry=http://localhost:4873/" > .npmrc
+echo "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY" >> .npmrc
+
 exitstatus=0
 
 for d in **/package.json; do
@@ -29,6 +33,7 @@ done
 
 # Verdaccio currently does not support deprecation
 # so we manually modify the metadata
+rm -f .npmrc
 node deprecate.cjs @pnpm.e2e/deprecated;
 node update-time.cjs
 
