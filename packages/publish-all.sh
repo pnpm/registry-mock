@@ -10,7 +10,15 @@ exitstatus=0
 
 for d in **/package.json; do
   cd $(dirname $d);
-  pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
+  # Use npm pack for packages that contain raw catalog: protocol specs,
+  # since pnpm publish would try to resolve them.
+  if grep -q '"catalog:' package.json; then
+    tarball=$(npm pack --pack-destination ..)
+    pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ "../$tarball" || exitstatus=$?;
+    rm -f "../$tarball"
+  else
+    pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ || exitstatus=$?;
+  fi
   cd ..;
   if [ $exitstatus -ne 0 ]; then
     break;
