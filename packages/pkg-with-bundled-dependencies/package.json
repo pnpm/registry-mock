@@ -2,7 +2,7 @@
   "name": "@pnpm.e2e/pkg-with-bundled-dependencies",
   "version": "1.0.0",
   "scripts": {
-    "prepublishOnly": "npm install --ignore-scripts --no-package-lock"
+    "prepublishOnly": "pnpm install --ignore-scripts --node-linker=hoisted --no-lockfile"
   },
   "bundledDependencies": [
     "@pnpm.e2e/hello-world-js-bin"
