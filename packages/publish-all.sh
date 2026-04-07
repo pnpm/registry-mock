@@ -4,11 +4,8 @@ set -e;
 
 cd packages;
 export pnpm_config_registry=http://localhost:4873/;
+export npm_config_registry=http://localhost:4873/;
 pnpm config set "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY";
-
-# Write .npmrc so npm lifecycle scripts spawned by pnpm also use the local registry
-echo "registry=http://localhost:4873/" > .npmrc
-echo "//localhost:4873/:_authToken=h6zsF82dzSCnFsws9nQXtxyKcBY" >> .npmrc
 
 exitstatus=0
 
@@ -29,8 +26,6 @@ for d in **/package.json; do
     exit $exitstatus;
   fi
 done
-
-rm -f .npmrc
 
 # Verdaccio currently does not support deprecation
 # so we manually modify the metadata
