@@ -90,9 +90,12 @@ export function prepare (opts?: PrepareOptions) {
 
   const storageCache = locations.storageCache()
   fsx.copySync(storageCache, storage)
-  const config = readYamlFileSync<any>(path.join(import.meta.dirname, '../registry/config.yaml'))
+  const { logs, ...config } = readYamlFileSync<any>(path.join(import.meta.dirname, '../registry/config.yaml'))
+  // Convert logs (array, for verdaccio 5) to log (object, for verdaccio 6)
+  const log = Array.isArray(logs) ? logs[0] : logs
   writeYamlFile.sync(locations.configPath(), {
     ...config,
+    log,
     storage,
     plugins: path.join(import.meta.dirname, '..', 'node_modules'),
     uplinks: {
