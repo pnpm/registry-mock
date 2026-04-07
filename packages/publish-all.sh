@@ -15,9 +15,10 @@ exitstatus=0
 
 for d in **/package.json; do
   cd $(dirname $d);
-  # Use npm pack + pnpm publish for packages with raw catalog: protocol specs,
-  # since pnpm publish from a directory would try to resolve them.
-  if grep -q '"catalog:' package.json; then
+  # Use npm pack + pnpm publish for packages that pnpm can't publish directly:
+  # - catalog: protocol specs (pnpm would try to resolve them)
+  # - bundleDependencies (pnpm requires hoisted nodeLinker)
+  if grep -q '"catalog:\|"bundleDependencies\|"bundledDependencies' package.json; then
     tarball=$(npm pack --ignore-scripts --pack-destination ..)
     pnpm publish --no-git-checks --@jsr:registry=http://localhost:4873/ "../$tarball" || exitstatus=$?;
     rm -f "../$tarball"
