@@ -2,6 +2,6 @@
   "name": "@pnpm.e2e/has-native-dep",
   "version": "1.0.1",
   "dependencies": {
-    "bcrypt": "3.0.6"
+    "bcrypt": "5.0.0"
   }
 }
